@@ -1,0 +1,48 @@
+<?php
+
+class Database
+{
+	private $db_name;
+	private $db_user;
+	private $db_pass;
+	private $db_host;
+	private $bdd;
+
+
+	public function __construct ( $db_name , $db_user = 'root' , $db_pass =  '' , $db_host= 'localhost' )
+	
+	{
+		$this->db_name=$db_name;
+		$this->db_user=$db_user;
+		$this->db_pass=$db_pass;
+		$this->db_host=$db_host;
+	}
+
+	//create the PDO statement
+
+	public function getPDO()
+	{
+		try
+			{
+				$bdd = new PDO('mysql:host=localhost;dbname=blog', 'root', '');
+			}
+
+			catch(Exception $e)
+				{
+					die('Erreur : '.$e->getMessage());
+				}
+			$this->bdd=$bdd;
+			return $bdd;
+	}
+
+	//insert of Data
+
+	public function insert ($Name,$Username)
+	{
+		$req=$this->getPDO()->prepare("INSERT INTO student_info(first_name,last_name,id_number,faculty,password) VALUES(?,?,?,?,?)");
+		$req->execute(array($_POST['F_name'],$_POST['L_name'],$_POST['Id_number'],$_POST['Faculty'],$_POST['password']));
+		echo "Done";
+
+	}
+
+}

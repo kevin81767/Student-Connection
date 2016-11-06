@@ -1,0 +1,87 @@
+body
+{
+	/*background-image:url('Pic2-11.jpg');
+	background-attachment:fixed;*/
+	background-color: #878787;
+}
+
+a:hover
+{
+	color: #2D2D2D;
+	/*background-color: yellow;*/
+}
+
+.head
+{
+	border-style: outset;
+	border-width: 5px;
+	border-color:#3590f3;
+}
+
+/*verse of the day design*/
+.verse
+{
+	text-shadow: 3px;
+}
+/*________________
+
+
+/*staff publication design*/
+.staff_pub
+{
+	
+}
+
+
+/*.container
+{
+	background-color:#8fb8ed;
+}*/
+#navnav
+{
+	background-color:black;
+}
+.myCarousel
+      {
+        width:0px;
+        height: 300px;
+      }
+.carousel-inner > .item > img{
+       width:1000px;
+       height:300px;
+     }
+
+
+/*the bottom portions design */
+
+.bottom
+{
+	text-align: center;
+	font-size:12px;
+}
+
+.bottom a
+{
+	color:#2D2D2D;
+}
+
+.bottom a:hover
+{
+	color:#007FFF;
+	text-decoration: none;
+}
+
+/*______________________________*/
+
+
+/*content of the page from default*/
+.content
+{
+	border-radius: 2px;
+} 
+/*______________________________*/
+/*_____Avatar pic : user.php______;*/
+.info img
+{
+	position:relative;
+}
