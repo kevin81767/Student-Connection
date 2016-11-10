@@ -28,10 +28,15 @@ if(!empty($_POST['post']) AND ($_POST['publication']))
 	$post=$_POST['post'];
 	$faculty=$_POST['faculty'];
 	$publication=$_POST['publication'];
+
+	if ($_FILE['document'])
+	{
+
+	}
 	require 'class/Staff_Pub.php';
 	
 	$pub=New Staff_Pub('db_auca');
-	$get=$pub->insert_staff_pub($post,$faculty,$publication);
+	$get=$pub->insert_staff_pub($post,$faculty,$publication,);
 	
 	if ($get)
 	{
@@ -43,7 +48,7 @@ if(!empty($_POST['post']) AND ($_POST['publication']))
 	}
 }
 ?>
-		<form  class='form-group' action='admin.php?p=publication' method='POST'>
+		<form  class='form-group' action='admin.php?p=publication' method='POST' multipart='enctype/data'>
 			<?php
 			if(isset($report))
 					{
@@ -61,6 +66,7 @@ if(!empty($_POST['post']) AND ($_POST['publication']))
 																			<option value='Education'>Education</option>
 																		   </select>
 			<label>Write the publication here</label>:<textarea name='publication' cols='50' rows='20' class='form-control' required ></textarea><br/>
+			<input type='file' name='document'/><br/>
 			<input type='submit' value='Submit' class='btn btn-info'/>
 		</form>
 	

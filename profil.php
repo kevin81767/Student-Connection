@@ -39,7 +39,7 @@ $take=$dat->every($first_name,$id_number);
 				?>
 					<!-- upload avatar form -->
 					<form class='form-group' action='login.php?p=myprofil' method='post' enctype="multipart/form-data">
-						<label class='text-danger'>Change the profile's picture</label>:<input type='file' name='picture'/>
+						<label class='alert alert-info alert-sm'>Change the profile's picture</label>:<input type='file' name='picture'/>
 						<button class='btn btn-warning btn-xs' type="submit" value="upload"><span class='glyphicon glyphicon-upload'>upload</span></button>
 					</form>
 			</div>
