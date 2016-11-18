@@ -33,7 +33,8 @@ $take=$dat->every($first_name,$id_number);
 				else
 				{
 					?>
-				<img src='images.jpg' class='img-rounded' alt='avatar' id='avatar_pic' width=200 height=200/>
+				<div class='col-lg-4 col-md-4 col-sm-4'>
+				<img src='images.jpg' class='thumbnail thumbnail-responsive' alt='avatar' id='avatar_pic' width=200 height=200/>
 				<?php
 				}
 				?>
@@ -42,6 +43,7 @@ $take=$dat->every($first_name,$id_number);
 						<label class='alert alert-info alert-sm'>Change the profile's picture</label>:<input type='file' name='picture'/>
 						<button class='btn btn-warning btn-xs' type="submit" value="upload"><span class='glyphicon glyphicon-upload'>upload</span></button>
 					</form>
+			</div>
 			</div>
 
 

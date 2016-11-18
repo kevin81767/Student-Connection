@@ -27,6 +27,10 @@
 			{
 				require 'publication.php';
 			}
+			elseif($p === 'assignment')
+			{
+				require 'assignment.php';
+			}
 			elseif($p==='login')
 			{
 				require 'login.php';

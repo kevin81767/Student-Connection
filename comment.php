@@ -63,7 +63,7 @@ else
 
 		<form class='form-group' action='login.php?p=comment&amp;c=<?=$_GET['c'];?>' method='POST'>
 		<textarea class='form-control' name='comment' cols='50'></textarea>
-		<input type='submit' value='comment' class='btn btn-default'/>
+		<input type='submit' value='comment' class='btn btn-info'/>
 		</form>
 	
 	
@@ -77,7 +77,7 @@ else
 			foreach($get as $co): //__$co is like commentary
 			?>
 
-				<div class='alert alert-info'>
+				<div class='alert alert-warning'>
 					<h4><a href="login.php?p=user&amp;id=<?=$id;?>"><?=$co->first_name;?></a></h4>
 					<p><?=$co->comment;?></p>
 					<br/>

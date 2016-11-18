@@ -28,15 +28,10 @@ if(!empty($_POST['post']) AND ($_POST['publication']))
 	$post=$_POST['post'];
 	$faculty=$_POST['faculty'];
 	$publication=$_POST['publication'];
-
-	if ($_FILE['document'])
-	{
-
-	}
 	require 'class/Staff_Pub.php';
 	
 	$pub=New Staff_Pub('db_auca');
-	$get=$pub->insert_staff_pub($post,$faculty,$publication,);
+	$get=$pub->insert_staff_pub($post,$faculty,$publication);
 	
 	if ($get)
 	{
@@ -55,6 +50,7 @@ if(!empty($_POST['post']) AND ($_POST['publication']))
 						echo "<div class='alert alert-warning'>".$report."</div>";
 					}
 			?>
+			<a href='admin.php?p=assignment'><button type='button' class='btn btn-success btn-block'>Give an assignment</button></a>
 			<label>This publication is from</label>:<input type='text' name='post' class='form-control' required />
 			<label>This publication is for</label>:<select name='faculty' class='form-control' >
 																			<option value ='All'> All </option>
@@ -66,7 +62,7 @@ if(!empty($_POST['post']) AND ($_POST['publication']))
 																			<option value='Education'>Education</option>
 																		   </select>
 			<label>Write the publication here</label>:<textarea name='publication' cols='50' rows='20' class='form-control' required ></textarea><br/>
-			<input type='file' name='document'/><br/>
+			<input type='file' name='document'/><
 			<input type='submit' value='Submit' class='btn btn-info'/>
 		</form>
 	

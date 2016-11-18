@@ -60,7 +60,7 @@ if(isset ($_GET['id']))
 									else
 									{
 										?>
-									<img src='images.jpg' alt='avatar' id='avatar_pic' width=200 height=200/>
+									<img src='images.jpg' alt='avatar' class='img-circle' id='avatar_pic' width=200 height=200/>
 									<?php
 
 

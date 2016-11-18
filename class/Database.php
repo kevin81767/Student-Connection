@@ -44,6 +44,13 @@ class Database
 		$req->execute(array($name_avatar,$first_name,$last_name,$id_number));
 		return $req;
 	}
+
+	public function assignment_st($teacher,$assignment,$name_document)
+	{
+		$req=$this->getPDO()->prepare("INSERT INTO assignment_teacher (teacher,assignment,document) VALUES (?,?,?)");
+		$req->execute(array($teacher,$assignment,$name_document));
+		return $req;
+	}
 	
 	
 	
