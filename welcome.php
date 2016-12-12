@@ -24,6 +24,11 @@ if (isset($_POST['publication']))
 			{
 				$report="your publication is online";
 			}
+
+			$dat=New Database('db_auca');
+			$dte=$dat->GetDate();
+			var_dump($dte);
+			echo"<div class='alert alert-danger'>".$dte."</div>";
 	
 	}
 		else

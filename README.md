@@ -1,3 +1,4 @@
+ 
 Auca Connection (Adventist University of Central Africa) is a kind of social Network that i create to help student to
 be update of what happened to school even if they are not there. The first reason i create the platform was to encourage 
 student to take part of the announcement gave by the staff of the University.

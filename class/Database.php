@@ -20,6 +20,7 @@ class Database
 
 	//create the PDO statement
 
+	
 	public function getPDO()
 	{
 		$pdo=New PDO("mysql:dbname=db_auca;host=localhost","root","kondor");
@@ -50,6 +51,13 @@ class Database
 		$req=$this->getPDO()->prepare("INSERT INTO assignment_teacher (teacher,assignment,document) VALUES (?,?,?)");
 		$req->execute(array($teacher,$assignment,$name_document));
 		return $req;
+	}
+
+
+	public function GetDate()
+	{
+		$da=$this->getPDO()->prepare("SELECT NEXT_DAY ('25-11-2016','FRIDAY') FROM DUAL");
+		return $da;
 	}
 	
 	

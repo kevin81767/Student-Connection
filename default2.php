@@ -80,7 +80,7 @@
 				?>
 			</div>
 			<br/>
-			<div class="navbar navbar-inverse navbar-fixed-top">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div class='container' id='navnav'>
 					<a class='navbar-brand' href='login.php?p=welcome'>Auca Connection</a>
 					<button class="navbar-toggle" data-toggle="collapse" data-target="#navHeaderCollapse">
@@ -98,7 +98,7 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</nav>
 			<div class='starter-template' >
 				<div class='content'>
 			<?= $content ; ?>

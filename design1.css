@@ -5,6 +5,13 @@ body
 	background-color: #878787;
 }
 
+.register
+{
+	position: relative;
+	text-align: center;
+	width:300px;
+}
+
 a:hover
 {
 	color: #2D2D2D;
